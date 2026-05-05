@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Enter your name and city"
+echo "Enter Your Name and City:"
 
 read name city
 
