@@ -66,6 +66,11 @@ echo 'My name is $name'
 3. Why do you think that difference is happening?
 
 
+🔥 One-line rule (remember this forever)
+
+👉 ```" "``` → variables work
+
+👉 ```' '``` → variables do NOT work
 
 
 
