@@ -2,7 +2,7 @@
 
 echo " your pin number::"
 
-read pin # pin is varaible
+read -s pin # pin is varaible -s means it will not show the pin number while entering
 
 echo "your number is:: $pin"
 
