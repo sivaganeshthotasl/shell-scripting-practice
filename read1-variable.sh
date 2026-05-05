@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo " Enter your city"
+echo " Enter your city:"
 
 read city
 
