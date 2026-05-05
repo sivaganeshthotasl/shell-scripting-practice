@@ -7,5 +7,5 @@
 
 read -p "Enter you name and role:" name role
 
-echo "$name is working as $role"s
+echo "$name is working as $role"
 
