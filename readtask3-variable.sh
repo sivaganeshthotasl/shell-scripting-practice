@@ -1,9 +1,9 @@
 #!/bin/bash
 
-echo "Enter you role"
+echo "Enter Your Role:"
 
 read role
 
-echo " you are working as $role in Singapore"
+echo " You are working as $role in Singapore"
 
 
