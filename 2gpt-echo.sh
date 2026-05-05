@@ -3,4 +3,4 @@
 #Using -e (new line)
 
 
-echo /e "Hello\Sivaganeshthotasl"
+echo \n "Hello\Sivaganeshthotasl"
