@@ -16,5 +16,5 @@ echo -e "A\tB"
 
 echo -e "A\\B"
 
-echo -e "A\B"
+echo -e "A\"B"
 
