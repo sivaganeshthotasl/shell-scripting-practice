@@ -18,6 +18,13 @@ cities=("Bangalore" "Hyderabad" "Chennia" "Amaravathi")
 
 echo ${#cities[@]}  # # is used to count all arrays or indexes.
 
+#Print Indexes 
+
+cities=("Bangalore" "Hyderabad" "Chennai" "Amaravathi")
+
+echo ${!cities[@]}  # ! is used print indexes
+
+
 
 
 
