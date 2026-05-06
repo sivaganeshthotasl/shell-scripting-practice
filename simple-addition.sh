@@ -19,6 +19,9 @@ echo $a
 
 echo $b
 
+((c=10/2))
+
+echo $c
 
 
 
