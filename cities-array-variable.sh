@@ -12,5 +12,13 @@ cities=("Bangalore" "Hyderabad" "Chennai" "Amaravathi")
 
 echo ${cities[1]}  # it will pick 2nd index of city and print
 
+#Print total number of cities
+
+cities=("Bangalore" "Hyderabad" "Chennia" "Amaravathi")
+
+echo ${#cities{@}}  # # is used to count all arrays or indexes.
+
+
+
 
 
