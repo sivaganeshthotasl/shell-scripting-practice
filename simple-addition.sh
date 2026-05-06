@@ -13,5 +13,13 @@ echo $((a + b))
 
 echo $a
 
+#substraction
+
+((b=234-250))
+
+echo $b
+
+
+
 
 
