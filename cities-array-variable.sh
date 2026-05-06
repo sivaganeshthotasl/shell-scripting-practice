@@ -16,7 +16,7 @@ echo ${cities[1]}  # it will pick 2nd index of city and print
 
 cities=("Bangalore" "Hyderabad" "Chennia" "Amaravathi")
 
-echo ${#cities{@}}  # # is used to count all arrays or indexes.
+echo ${#cities[@]}  # # is used to count all arrays or indexes.
 
 
 
