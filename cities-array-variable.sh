@@ -24,6 +24,12 @@ cities=("Bangalore" "Hyderabad" "Chennai" "Amaravathi")
 
 echo ${!cities[@]}  # ! is used print indexes
 
+#Print last index
+
+cities=("Bangalore" "Hyderabad" "Chennai" "Amaravathi")
+
+last_index=$((${#cities[@]} -1))
+echo ${cities[$last_index]}
 
 
 
