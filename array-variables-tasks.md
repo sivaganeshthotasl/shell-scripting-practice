@@ -143,8 +143,15 @@ Cities=(Bangalore, Chennai, Hyderabad, Amaravathi)
 
 → Print indexes
 
+we should be comfortable with:
 
+✔ ${array[index]}
 
+✔ ${array[@]}
+
+✔ ${#array[@]}
+
+✔ ${!array[@]}
 
 
 
