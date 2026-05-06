@@ -127,6 +127,32 @@ arr=("apple" "" "banana" "" "mango")
 
 
 
+**Mini Practice (Do This Before Moving Ahead)**
+
+Create this:
+
+Cities=(Bangalore, Chennai, Hyderabad, Amaravathi)
+
+👉 Try these:
+
+→ Print all cities
+
+→ Print second city
+
+→ Print total number of cities
+
+→ Print indexes
+
+we should be comfortable with:
+
+✔ ${array[index]}
+
+✔ ${array[@]}
+
+✔ ${#array[@]}
+
+✔ ${!array[@]}
+
 
 
 
