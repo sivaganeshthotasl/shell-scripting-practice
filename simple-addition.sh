@@ -6,5 +6,5 @@ b=5
 
 #echo $((a + b))  # addition
 
-echo sum($a + $b)
+echo sum(($a + $b))
 
