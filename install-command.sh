@@ -23,6 +23,8 @@ then
 else
      echo " installing mysql is ::::: Failure "
      exit 1
+fi
+
 else
      echo " Mysql is already install:: nothing to do "
      
