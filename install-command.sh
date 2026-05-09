@@ -3,7 +3,7 @@
 
 userid=( id -u )
 
-if [ $userid -eq 0 ]
+if [ $userid -ne 0 ]
 then
      echo " Error:: Please proceed with root user "
      
