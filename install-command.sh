@@ -12,7 +12,7 @@ else
 fi
 
 
-dnf install mysqlserver -y
+dnf install mysqlserverafonafnaown -y
 
 if [ $? -eq 0 ]
 then
