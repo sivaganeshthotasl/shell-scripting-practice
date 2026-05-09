@@ -2,9 +2,9 @@
 
 names=("Siva" "Ravi" "Ganesh")
 
-echo ${names[0]}
-echo ${names[1]}
-echo ${names[2]}
+echo ${names[0]}  #Siva
+echo ${names[1]}  #Ravi
+echo ${names[2]}  #Ganesh
 
 
 #wrong syntax
