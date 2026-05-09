@@ -6,7 +6,7 @@ userid=$(id -u)
 if [ $userid -ne 0 ]
 then
      echo " Error:: Please proceed with root user "
-     
+     exit 1
 else
      echo " you are running with root user "
 fi
