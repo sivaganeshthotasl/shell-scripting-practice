@@ -2,7 +2,7 @@
 
 number=90
 
-if [ $number -gt 100]
+if [ $number -gt 100 ]
 
 then
      echo " Number is greater than 100 "
