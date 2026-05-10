@@ -2,7 +2,7 @@
 
 fruits=("Banana" "Apple" "Orange" "Mango")
 
-echo ${fruits[@]} # @ prints all fruits
+echo ${fruits[@]} # @ prints all fruits in one line
 
 
 
