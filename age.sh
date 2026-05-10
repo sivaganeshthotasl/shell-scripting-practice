@@ -1,6 +1,6 @@
 #!/bin/bash
 
-age=20
+age=$1
 
 if [ $age -gt 18 ]
 
