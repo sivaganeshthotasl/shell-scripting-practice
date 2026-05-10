@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name="Siva"
+name="$1"
 
 if [ $name = Siva ]
 then
