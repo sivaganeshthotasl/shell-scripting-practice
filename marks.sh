@@ -1,6 +1,6 @@
 #!/bin/bash
 
-marks=35
+marks=34
 
 if [ $marks -lt 35 ]
 then
