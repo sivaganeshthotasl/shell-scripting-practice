@@ -3,7 +3,7 @@
 
 USERID=$(id -u)
 
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then
      echo " Error:: Please proceed with root user "
 else
@@ -23,10 +23,13 @@ then
 else
      echo " Installing Mysql::::::: Failure "
      exit 1
+fi
 
 else
      echo " Mysql is already installed::: Nothing to do "
 fi
+
+
 
 
 
