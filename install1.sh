@@ -8,6 +8,7 @@ then
      echo " Error:: Please proceed with root user "
 else
      echo " You are using Root User "
+     exit 1
 fi
 
 dnf list installed mysql
