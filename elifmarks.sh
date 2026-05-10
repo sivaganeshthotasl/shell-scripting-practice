@@ -2,10 +2,10 @@
 
 read -p " Enter Marks : " Marks
 
-if [ $Marks -gt 90 ]
+if [ $Marks -ge 90 ]
 then
      echo " Grade A "
-elif [ $Marks -gt 70 ]
+elif [ $Marks -ge 70 ]
 then
      echo " Grade B "
 else
