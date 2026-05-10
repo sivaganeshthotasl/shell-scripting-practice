@@ -1,6 +1,6 @@
 #!/bin/bash
 
-marks=35
+marks=$1
 
 if [ $marks -lt 35 ]
 then
@@ -8,3 +8,4 @@ then
 else
      echo " Passed "
 fi
+
