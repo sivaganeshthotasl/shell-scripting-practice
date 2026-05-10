@@ -1,10 +1,10 @@
 #!/bin/bash
 
-username="admin"
+read -p " Username: " username
 
-if [ $username = admin ]
+if [ $username = Admin ]
 then
-     echo " Welcom Admin "
+     echo " Welcome Admin "
 else
      echo " Invalid User "
 
