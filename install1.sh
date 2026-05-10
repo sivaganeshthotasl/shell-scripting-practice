@@ -6,9 +6,10 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
      echo " Error:: Please proceed with root user "
+     exit 1
 else
      echo " You are using Root User "
-     exit 1
+     
 fi
 
 dnf list installed mysql
