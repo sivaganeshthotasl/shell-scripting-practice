@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name="$1"
+name="Siva"
 
 if [ $name = Siva ]
 then
@@ -8,4 +8,14 @@ then
 else
      echo " Unknown User "
 fi
+
+# name=$1
+
+# if [ $name = Siva ]
+# then
+#      echo " Welcome Siva "
+# else
+#      echo " Unknown User "
+# fi
+
 
