@@ -1,14 +1,14 @@
 #!/bin/bash
 
-userid=$(id -u)
+# userid=$(id -u)
 
-if [ $userid -ne 0 ]
-then
-     echo " Error:: Please proceed with root user "
-     exit 1
-else 
-     echo " You are using root user "
-fi
+# if [ $userid -ne 0 ]
+# then
+#      echo " Error:: Please proceed with root user "
+#      exit 1
+# else 
+#      echo " You are using root user "
+# fi
 
 
 systemctl is-active sshd
@@ -21,3 +21,5 @@ then
 else 
      echo " sshd service is not running "
 fi
+
+
