@@ -24,4 +24,4 @@ GREET(){
 
 }
 
-GREET
+GREET Ganesh
