@@ -55,3 +55,5 @@ else
      echo " Nginx is already installed....Nothing to do "
 
 fi
+
+
