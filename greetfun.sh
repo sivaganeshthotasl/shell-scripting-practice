@@ -11,10 +11,17 @@ else
 fi
 
 
-GREET(){
+# GREET(){
     
-    echo "Hello Siva"
+#     echo "Hello Siva"
+
+# }
+
+# GREET
+
+GREET(){
+    echo " Hello $1 "
 
 }
 
-GREET
+GREET SIVA 
