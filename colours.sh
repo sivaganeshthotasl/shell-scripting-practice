@@ -9,7 +9,7 @@ else
      echo -e " \e[32m You are running with Root user "
 fi
 
-echo -e " \e[31m Hello Red Colur "
+echo -e " \e[31m Hello Red Colur \e[0m "
 
 echo " Hello No Colour "
 
