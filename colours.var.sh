@@ -20,7 +20,7 @@ VALIDATE(){
     then
           echo " $G Installing $2 is.....Successfull $N "
     else
-          echo " $R Installing $2 is......Failed $N"
+          echo " $R Installing $2 is......Failed $N "
           exit 1
     fi
 
@@ -45,7 +45,7 @@ then
      dnf install python3 -y
      VALIDATE $? "python3"
 else
-     echo -e $Y Python3 is already installed....NOthing to do $N "
+     echo -e " $Y Python3 is already installed....NOthing to do $N "
 fi
 
 dnf list installed nginx
