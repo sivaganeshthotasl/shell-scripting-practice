@@ -9,18 +9,18 @@ USERID="$(id -u)"
 
 if [ $USERID -ne 0 ]
 then
-     echo " $R ERROR::: You are not running this script with Root User $N "
+     echo -e " $R ERROR::: You are not running this script with Root User $N "
      exit 1
 else
-     echo " $G You are running with Root User $N "
+     echo -e " $G You are running with Root User $N "
 fi
 
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-          echo " $G Installing $2 is.....Successfull $N "
+          echo -e " $G Installing $2 is.....Successfull $N "
     else
-          echo " $R Installing $2 is......Failed $N "
+          echo -e " $R Installing $2 is......Failed $N "
           exit 1
     fi
 
