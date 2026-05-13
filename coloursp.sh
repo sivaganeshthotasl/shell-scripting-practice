@@ -22,7 +22,7 @@ echo "Hello \e[32m Ganesh You have \e[32m Successfully Completed \e[0m"
 # Hello \e[32m Ganesh You have \e[32m Successfully Completed \e[0m
 
 #with -e
-echo -e "Hello Ganesh You have \e[32m Successfully Completed \e[0m"  # you will see the exact output now.
+echo -e "Hello Ganesh You are going to Complete shell scripting \e[32m Successfully C \e[0m"  # you will see the exact output now.
 
 
 
