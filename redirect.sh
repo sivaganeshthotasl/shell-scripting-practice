@@ -9,6 +9,3 @@ N="\e[0m"
 echo -e " $G Hello DevSecops $N " > file.txt
 echo -e " $B Hello Siva Ganesh $N You are working as $Y DevSecOps Engineer $N right $N " >> file.txt
 
-cat > names.txt Siva Ravi Ganesh
-wc -l < names.txt
-
