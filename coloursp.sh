@@ -22,7 +22,19 @@ echo "Hello \e[32m Ganesh You have \e[32m Successfully Completed \e[0m"
 # Hello \e[32m Ganesh You have \e[32m Successfully Completed \e[0m
 
 #with -e
-echo -e "Hello Ganesh You are going to Complete shell scripting \e[32m "Successfully"  \e[0m"  # you will see the exact output now.
+echo -e "Hello Ganesh You are going to Complete shell scripting \e[32m Successfully \e[0m"  # you will see the exact output now.
+
+
+# what \e = it tells to terminal special Formating is starting now.
+
+# what is 31m = this is actual colour code.
+
+#Lets create some colours code using some colour codes
+
+echo -e " This Is \e[31m RED C0lour \e[0m "
+echo -e " This Is \e[32m Green Colour \e[0m "
+echo -e " This is \e[33m Yellow Colour \e[0m "
+
 
 
 
