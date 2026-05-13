@@ -31,9 +31,9 @@ echo -e "Hello Ganesh You are going to Complete shell scripting \e[32m Successfu
 
 #Lets create some colours code using some colour codes
 
-echo -e " This Is \e[31m RED C0lour \e[0m "
-echo -e " This Is \e[32m Green Colour \e[0m "
-echo -e " This is \e[33m Yellow Colour \e[0m "
+echo -e " This Is \e[31m RED \e[0m C0lour "
+echo -e " This Is \e[32m Green \e[0m Colour "
+echo -e " This is \e[33m Yellow \e[0m Colour "
 
 
 
