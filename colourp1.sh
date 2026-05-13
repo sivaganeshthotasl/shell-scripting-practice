@@ -9,7 +9,7 @@ N="\e[0m"
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
-     echo -e " $R You are not running this script with Root User $N "
+     echo -e " $R ERROR::: $B You are not running this script with Root User $N "
      exit 1
 else
      echo -e " $G You are running with $G Root User $N "
