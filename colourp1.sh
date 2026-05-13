@@ -39,7 +39,7 @@ fi
 dnf list installed git
 if [ $? -ne 0 ]
 then
-     echo -e " $ is $2 Not Installed....$Y Going to install It $N "
+     echo -e " $2 is $2 Not Installed....$Y Going to install It $N "
      dnf install git -y
      VALIDATE $? "git"
 else
