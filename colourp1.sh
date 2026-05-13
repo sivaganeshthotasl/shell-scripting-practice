@@ -35,3 +35,13 @@ then
 else
     echo -e " $2 is Already Installed::: $Y Nothing to do $N "
 fi
+
+dnf list installed git
+if [ $? -ne 0 ]
+then
+     echo -e " $ is $2 Not Installed....$Y Going to install It $N "
+     dnf install git -y
+     VALIDATE $? "git"
+else
+     echo -e " $2 is Already Installed :::: $Y Nothing to do $N "
+fi
