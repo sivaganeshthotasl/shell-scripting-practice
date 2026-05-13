@@ -10,5 +10,5 @@
 
 #so we use colours to highlight those. lets begin 
 
-echo -e "Hello You are in "\e[31m" Danger "\e[0m""
+echo -e "Hello You are in \e[31m Danger \e[0m"
 
