@@ -42,13 +42,13 @@ echo -e " \e[35m Proffessional method using VARIABLES \e[0m "
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
-B=\e[34m"
+B="\e[34m"
 N="\e[om"
 
 echo -e "$R ERROR $N"
 echo -e "$G SUCCESS $N"
 echo -e "$Y WARNING $N"
-echo -e "$B INFO $N "
+echo -e "$B INFO $N"
 
 
 
