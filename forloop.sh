@@ -48,7 +48,7 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then
      echo " $2 is not found....Going to Install it "
-     dnf install mysql -Y
+     dnf install mysql -y
      VALIDATE $? "mysql"
 else
      echo " $2 is already Installed....: Nothing to do "
