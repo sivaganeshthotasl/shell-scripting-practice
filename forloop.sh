@@ -41,7 +41,7 @@ then
      VALIDATE $? "python3"
 else
      echo " $2 is already Installed....:Nothing to do "
-if
+fi
 
 dnf list installed mysql
 
