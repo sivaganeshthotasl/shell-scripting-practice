@@ -14,7 +14,7 @@ fi
 
 for package in nginx mysql 
 do
-dnf install $package -y &>>$LOG_FOLDER
+dnf install $package -y 
 if [ $? -eq 0 ]
 then
      echo -e " \e[34m $package \e[0m is installed \e[32m Successfull \e[0m " 
