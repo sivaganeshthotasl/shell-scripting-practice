@@ -1,22 +1,29 @@
 #!/bin/bash
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+B="\e[34m"
+N="\e[0m"
+
+
 
 USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
-     echo " Error::You are not running with Root User"
+     echo -e " $R Error $N ::You are not running with Root User "
      exit 1
 else
-     echo " You are running with Root User "
+     echo " You are running with Root User $G Successfull $N "
 fi
 
 
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-         echo " Installing $2 is ....Successfull"
+         echo -e " Installing $2 is .... $G Successfull $N "
     else
-         echo " Insgtalling $2 is ...Failed "
+         echo -e " Insgtalling $2 is ... $R Failed $N "
          exit 1
     fi 
 }
@@ -29,28 +36,28 @@ then
      dnf install nginx -y
      VALIDATE $? "nginx"
 else
-     echo " $2 is already installed....Nothing to do "
+     echo -e " $B $2 is already installed.... $Y Nothing to do $N "
 fi
 
 dnf list installed python3
 
 if [ $? -ne 0 ]
 then
-     echo " $2 is not found...Going to Install it "
+     echo -e " $2 is not found...$G Going to Install it $N "
      dnf install python3 -y
      VALIDATE $? "python3"
 else
-     echo " $2 is already Installed....:Nothing to do "
+     echo -e " $2 is already Installed....: $Y Nothing to do "
 fi
 
 dnf list installed mysql
 
 if [ $? -ne 0 ]
 then
-     echo " $2 is not found....Going to Install it "
+     echo -e " $2 is not found....$G Going to Install it $N "
      dnf install mysql -y
      VALIDATE $? "mysql"
 else
-     echo " $2 is already Installed....: Nothing to do "
+     echo -e " $2 is already Installed....: $Y Nothing to do "
 fi
 
