@@ -4,7 +4,7 @@
 
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
-LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 
 mkidr -p $LOG_FOLDER
 echo " script started executed at $date "
@@ -27,7 +27,7 @@ if [ $? -eq 0 ]
 then
      echo -e " \e[34m $package \e[0m is installed \e[32m Successfull \e[0m " | tee -a $LOG_FOLDER
 else
-     echo -e " \e[34m $package \e[0m installation is \e[31m Failed \e[0m "   | tee -a $LOG_FOLDER
+     echo -e " \e[34m $package \e[0m installation is \e[31m Failed \e[0m " | tee -a $LOG_FOLDER
      exit 1
 fi
 done
