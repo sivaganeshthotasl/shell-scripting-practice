@@ -2,6 +2,16 @@
 
 # Installing packages using for loop
 
+USERID=$(id -u)
+if [ $? -ne 0 ]
+then
+     echo " You are not using root user to run this script "
+     exit 1
+else
+     echo " you are running with root user "
+fi
+
+
 for package in nginx mysql
 do
 dnf install $package -y
