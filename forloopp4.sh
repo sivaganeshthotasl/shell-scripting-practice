@@ -3,7 +3,7 @@
 # Installing packages using for loop
 
 USERID=$(id -u)
-if [ $? -ne 0 ]
+if [ $USERID -ne 0 ]
 then
      echo " You are not using root user to run this script "
      exit 1
