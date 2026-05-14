@@ -2,7 +2,7 @@
 
 # Installing packages using for loop
 
-for package in (nginx mysql)
+for package in nginx mysql
 do
 dnf install $packages -y
 if [ $? -eq 0 ]
