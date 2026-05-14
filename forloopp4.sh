@@ -7,7 +7,7 @@ SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p "$LOG_FOLDER"
-echo " script started executed at $(date) "
+echo " script started executed at $(date) " | tee -a $LOG_FOLDER
 
 
 USERID=$(id -u)
