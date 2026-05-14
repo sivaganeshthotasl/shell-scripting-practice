@@ -6,24 +6,29 @@ Y="\e[33m"
 B="\e[34m"
 N="\e[0m"
 
+LOG_FOLDER="/var/log/shellscript-logs"
+SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 
+mkdir -p $LOG_FOLDER
+echo -e " Script started executing at $B $(date) $N "
 
 USERID=$(id -u)
-if [ $USERID -ne 0 ]
+if [ $USERID -ne 0 ] 
 then
-     echo -e " $R Error $N ::You are not running with Root User "
+     echo -e " $R Error $N ::You are not running with Root User " | tee -a $LOG_FOLDER
      exit 1
 else
-     echo " You are running with Root User $G Successfull $N "
+     echo " You are running with Root User $G Successfull $N " | tee -a $LOG_FOLDER
 fi
 
 
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-         echo -e " Installing $B $2 is .... $G Successfull $N "
+         echo -e " Installing $B $2 is .... $G Successfull $N " | tee -a $LOG_FOLDER
     else
-         echo -e " Insgtalling $B $2 is ... $R Failed $N "
+         echo -e " Insgtalling $B $2 is ... $R Failed $N " | tee -a $LOG_FOLDER
          exit 1
     fi 
 }
@@ -33,10 +38,10 @@ dnf list installed nginx
 if [ $? -ne 0 ]
 then
      echo " $2 is not found...Going to Install it "
-     dnf install nginx -y
+     dnf install nginx -y &>>$LOG_FOLDER
      VALIDATE $? "nginx"
 else
-     echo -e " $B $2 $N is already installed.... $Y Nothing to do $N "
+     echo -e " $B $2 $N is already installed.... $Y Nothing to do $N " | tee -a $LOG_FOLDER
 fi
 
 dnf list installed python3
@@ -44,10 +49,10 @@ dnf list installed python3
 if [ $? -ne 0 ]
 then
      echo -e " $2 is not found...$G Going to Install it $N "
-     dnf install python3 -y
+     dnf install python3 -y &>>$LOG_FOLDER
      VALIDATE $? "python3"
 else
-     echo -e " $2 $N is already Installed....: $Y Nothing to do "
+     echo -e " $2 $N is already Installed....: $Y Nothing to do $N "  | tee -a $LOG_FOLDER
 fi
 
 dnf list installed mysql
@@ -55,9 +60,9 @@ dnf list installed mysql
 if [ $? -ne 0 ]
 then
      echo -e " $2 is not found....$G Going to Install it $N "
-     dnf install mysql -y
+     dnf install mysql -y &>>$LOG_FOLDER
      VALIDATE $? "mysql"
 else
-     echo -e " $2 $N is already Installed....: $Y Nothing to do "
+     echo -e " $2 $N is already Installed....: $Y Nothing to do $N " | tee -a $LOG_FOLDER
 fi
 
