@@ -41,10 +41,10 @@ do
     dnf list installed "$package"  &>>"$LOG_FILE"
     if [ $? -ne 0 ]
     then
-         echo -e " $G "$package" not found... Going to Install $N " | tee -a "$LOG_FILE"
+         echo -e " $R "$package" not found... $G Going to Install $N " | tee -a "$LOG_FILE"
          dnf install "$package" -y  &>>"$LOG_FILE"
          VALIDATE $? "$package"
-    else echo -e " $G "$package" are already installed::::: $Y nothing to do $N " | tee -a "$LOG_FILE"
+    else echo -e " $G "$package" $N are already installed::::: $Y nothing to do $N " | tee -a "$LOG_FILE"
     fi
 done
 
