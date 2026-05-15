@@ -26,7 +26,7 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-         echo -e " $R $2 is installed..... $G Successfull $N " | tee -a $LOG_FILE
+         echo -e " $G $2 is installed..... $G Successfull $N " | tee -a $LOG_FILE
     else
          echo -e " $B $2 Insgtalling is..... Failed o.. $Y Nothing to do $N " | tee -a $LOG_FILE
     fi
@@ -35,11 +35,11 @@ VALIDATE(){
 
 for packages in "nginx" "python3" "mysql"
 do
-    dnf list installed $packages &>>LOG_FILE
+    dnf list installed $packages  &>>$LOG_FILE
     if [ $? -ne 0 ]
     then
          echo -e " $G $packages not found... Going to Install $N " | tee -a $LOG_FILE
-         dnf install $packages -y &>>LOG_FILE
+         dnf install $packages -y  &>>$LOG_FILE
          VALIDATE $? "packages"
     else echo -e " $G $packages are already installed::::: $Y nothing to do $N " | tee -a $LOG_FILE
     fi
