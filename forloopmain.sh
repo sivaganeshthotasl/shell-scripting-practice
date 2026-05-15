@@ -28,7 +28,7 @@ else
 fi
 
 VALIDATE(){
-    if [ $1 -eq 0 ]
+    if [$1 -eq 0]
     then
          echo -e " $G $2 Installation...Successfull $N " | tee -a "$LOG_FILE"
     else
@@ -40,7 +40,7 @@ VALIDATE(){
 for package in "$@"
 do
      dnf list installed "$package" &>>"$LOG_FILE"
-     if [ $? -ne 0 ]
+     if [$? -ne 0]
      then
           echo -e " $R "$package" not found...$Y Going to Install $N " | tee -a "$LOG_FILE"
           dnf install "$package" -y  &>>"$LOG_FILE"
