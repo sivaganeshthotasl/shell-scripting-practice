@@ -10,7 +10,7 @@ N="\e[0m"
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
-package=("nginx" "httpd" "python3" "mysql")
+packages=("nginx" "httpd" "python3" "mysql")
 
 mkdir -p "$LOG_FOLDER"
 echo -e " script started executing at $B $(date) $N "
@@ -38,15 +38,15 @@ VALIDATE(){
     
 }
 
-for package in "${$package[@]}"
+for packages in "${packages[@]}"
 do
-   dnf list installed "$package" &>>"$LOG_FILE"
+   dnf list installed "$packages" &>>"$LOG_FILE"
    if [ $? -ne 0 ]
    then
-         echo -e " $R "$package" is Not Found... $Y Going to install $N "  | tee -a "$LOG_FILE"
-         dnf install "$package" -y  &>>"$LOG_FILE"
-         VALIDATE "$?" "$package"
+         echo -e " $R "$packages" is Not Found... $Y Going to install $N "  | tee -a "$LOG_FILE"
+         dnf install "$packages" -y  &>>"$LOG_FILE"
+         VALIDATE "$?" "$packages"
     else
-         echo -e " $Y "$package" is already installed.... $B Nothing to do $N "  | tee -a "$LOG_FILE"
+         echo -e " $Y "$packages" is already installed.... $B Nothing to do $N "  | tee -a "$LOG_FILE"
     fi
 done
