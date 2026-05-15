@@ -10,7 +10,7 @@ N="\e[0m"
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
-
+package=("nginx" "httpd" "python3" "mysql")
 
 mkdir -p "$LOG_FOLDER"
 echo -e " script started executing at $B $(date) $N "
@@ -38,7 +38,7 @@ VALIDATE(){
     
 }
 
-for package in "$@"
+for package in "${$package[@]}"
 do
    dnf list installed "$package" &>>"$LOG_FILE"
    if [ $? -ne 0 ]
