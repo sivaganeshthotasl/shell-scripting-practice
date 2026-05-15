@@ -9,7 +9,7 @@ N="\e[0m"
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
-packages="nginx" "python3" "mysql"
+package=("nginx" "python3" "mysql")
 
 mkdir -p "$LOG_FOLDER"
 echo " Script is executing started at $(date) " 
@@ -27,24 +27,24 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-         echo -e " $G $packages is installed..... $G Successfull $N " | tee -a $LOG_FILE
+         echo -e " $G "$package" is installed..... $G Successfull $N " | tee -a $LOG_FILE
     else
-         echo -e " $B $packages Installing is..... Failed o.. $Y Nothing to do $N " | tee -a $LOG_FILE
+         echo -e " $B "$package" Installing is..... Failed o.. $Y Nothing to do $N " | tee -a $LOG_FILE
          exit 1
     fi
 
 }
 
 # for packages in ${packages [@]}
-for packages in $@
+for packages in "$@"
 do
-    dnf list installed $packages  &>>$LOG_FILE
+    dnf list installed "$package"  &>>"$LOG_FILE"
     if [ $? -ne 0 ]
     then
-         echo -e " $G $packages not found... Going to Install $N " | tee -a $LOG_FILE
-         dnf install $packages -y  &>>$LOG_FILE
-         VALIDATE $? "$packages"
-    else echo -e " $G $packages are already installed::::: $Y nothing to do $N " | tee -a $LOG_FILE
+         echo -e " $G "$package" not found... Going to Install $N " | tee -a "$LOG_FILE"
+         dnf install "$package" -y  &>>"$LOG_FILE"
+         VALIDATE $? "$package"
+    else echo -e " $G "$package" are already installed::::: $Y nothing to do $N " | tee -a "$LOG_FILE"
     fi
 done
 
