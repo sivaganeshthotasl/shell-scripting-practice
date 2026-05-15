@@ -27,9 +27,9 @@ fi
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-         echo -e " $G "$package" is installed..... $G Successfull $N " | tee -a $LOG_FILE
+         echo -e " $G $2 is installed..... $G Successfull $N " | tee -a $LOG_FILE
     else
-         echo -e " $B "$package" Installing is..... Failed o.. $Y Nothing to do $N " | tee -a $LOG_FILE
+         echo -e " $B $2 Installing is..... Failed o.. $Y Nothing to do $N " | tee -a $LOG_FILE
          exit 1
     fi
 
