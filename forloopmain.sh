@@ -28,7 +28,7 @@ else
 fi
 
 VALIDATE(){
-    if [$1 -eq 0]
+    if [ $1 -eq 0 ]
     then
          echo -e " $G $2 Installation...Successfull $N " | tee -a "$LOG_FILE"
     else
