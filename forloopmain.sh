@@ -19,7 +19,7 @@ echo -e " script started executing at $B $(date) $N "
 # User validation
 
 USERID="$(id -u)"
-if [ $USERID -ne 0 ] | &>>"$LOG_FILE"
+if [ "$USERID" -ne 0 ]
 then
      echo -e " $R ERROR:: $N Please run this with $B Root User $N " | tee -a "$LOG_FILE"
      exit 1
