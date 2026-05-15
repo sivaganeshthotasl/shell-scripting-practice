@@ -12,7 +12,7 @@ SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 package=("nginx" "python3" "mysql")
 
-mkdir -p "$LOG_FOLDER
+mkdir -p "$LOG_FOLDER"
 echo -e " script started executing at $B $(date) $N "
 
 
