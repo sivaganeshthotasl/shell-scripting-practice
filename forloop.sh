@@ -19,7 +19,7 @@ then
      echo -e " $R Error $N ::You are not running with Root User " | tee -a $LOG_FILE
      exit 1
 else
-     echo " You are running with Root User $G Successfull $N " | tee -a $LOG_FILE
+     echo -e " You are running with Root User $G Successfull $N " | tee -a $LOG_FILE
 fi
 
 
