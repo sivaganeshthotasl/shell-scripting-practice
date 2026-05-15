@@ -27,7 +27,7 @@ else
      echo -e " $G You are running with Root User $N "  | tee -a "$LOG_FILE"
 fi
 
-VALIDATE() {
+VALIDATE(){
     if [ $1 -eq 0 ]
     then
          echo -e " $G $2 installation Successfull $N " | tee -a "$LOG_FILE"
