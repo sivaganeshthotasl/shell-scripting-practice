@@ -34,6 +34,7 @@ VALIDATE(){
     else
          echo -e " $R $2 installation Failed $N " | tee -a "$LOG_FILE"
          exit 1
+    fi
     
 }
 
