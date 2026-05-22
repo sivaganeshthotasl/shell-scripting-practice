@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sourch test.sh
+source test.sh
 
 echo $NAME
 
