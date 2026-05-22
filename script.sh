@@ -1,3 +1,3 @@
 #!/bin/bash
 
-source test.sh
+. test.sh
