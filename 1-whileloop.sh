@@ -8,15 +8,23 @@
 #      NUMBER=$((NUMBER+1))
 # done
 
-NUMBER=1
+# NUMBER=1
 
-while [ $NUMBER -le 5 ]
+# while [ $NUMBER -le 5 ]
+# do
+#      echo "NUMBER IS: $NUMBER"
+#      NUMBER=$((NUMBER+2))
+# done
+
+
+
+NUMBER=2
+
+while [ $NUMBER -eq 6 ]
 do
-     echo "NUMBER IS: $NUMBER"
-     NUMBER=$((NUMBER+2))
+     echo "Number is: $NUMBER"
+     NUMBER=$((NUMBER+1))
 done
-
-
 
 
  
