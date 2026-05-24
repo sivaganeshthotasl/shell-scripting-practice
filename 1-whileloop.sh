@@ -20,7 +20,7 @@
 
 NUMBER=2
 
-while [ $NUMBER -eq 6 ]
+while [ $NUMBER -le 6 ]
 do
      echo "Number is: $NUMBER"
      NUMBER=$((NUMBER+1))
