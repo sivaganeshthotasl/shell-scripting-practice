@@ -13,7 +13,7 @@ NUMBER=2
 while [ $NUMBER -le 5 ]
 do
      echo "NUMBER IS: $NUMBER"
-     NUMBER=$((NUMBER+1))
+     NUMBER=$((NUMBER+2))
 done
 
 
