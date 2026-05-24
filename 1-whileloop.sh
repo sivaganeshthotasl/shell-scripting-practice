@@ -8,7 +8,7 @@
 #      NUMBER=$((NUMBER+1))
 # done
 
-NUMBER=2
+NUMBER=1
 
 while [ $NUMBER -le 5 ]
 do
