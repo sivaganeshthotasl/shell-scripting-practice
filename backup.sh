@@ -10,11 +10,11 @@ N="\e[0m"
 
 SOURCE_DIR="$1"
 DISTNATION_DIR="$2"
-DAYS=${3:-14} # if days are provided that will be considered, otherwise daualt in 14 days.
+DAYS="${3:-14}" # if days are provided that will be considered, otherwise daualt in 14 days.
 
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
-LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME"
+LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 
 mkdir -p $LOG_FOLDER
 
@@ -34,7 +34,7 @@ VALIDATE(){
          echo -e "$G $2 is....Success $N"
     else
          echo -e "$R $2 is....Failed $N"
-         exti 1
+         exit 1
     fi
 }
 
@@ -48,13 +48,13 @@ then
     USAGE
 fi
 
-if [ ! -d $SOURCE_DIR ]
+if [ ! -d "$SOURCE_DIR" ]
 then
      echo -e "$R Source Directory $SOURCE_DIR does not exist $N Please check"
      exit 1
 fi
 
-if [ ! -d $destination_dir ]
+if [ ! -d "$DESTINATION_DIR" ]
 then
      echo -e "$R Destination Directory $destination_dir does not exist $N Please Check"
 fi
@@ -71,6 +71,8 @@ else
      exit 1
 
 fi
+
+
 
 
 
