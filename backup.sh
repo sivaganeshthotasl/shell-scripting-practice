@@ -50,13 +50,13 @@ fi
 
 if [ ! -d $SOURCE_DIR ]
 then
-     echo -e "$R $SOURCE_DIR does not exist $N Please check"
+     echo -e "$R Source Directory $SOURCE_DIR does not exist $N Please check"
      exit 1
 fi
 
 if [ ! -d $destination_dir ]
 then
-     echo -e "$R $destination_dir does not exist $N Please Check"
+     echo -e "$R Destination Directory $destination_dir does not exist $N Please Check"
 fi
 
 
