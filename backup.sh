@@ -10,7 +10,7 @@ N="\e[0m"
 
 SOURCE_DIR="$1"
 DISTNATION_DIR="$2"
-DAYS="${3:-14}" # if days are provided that will be considered, otherwise daualt in 14 days.
+DAYS=${3:-14} # if days are provided that will be considered, otherwise daualt in 14 days.
 
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
@@ -67,7 +67,7 @@ then
      echo "Files to zip are: $FILES"
 
 else
-     echo -e "$R No Files Found More then 14 days..Skipping $N"
+     echo -e "$R No Files Found Older then 14 days..Skipping $N"
      exit 1
 
 fi
