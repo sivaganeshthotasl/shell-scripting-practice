@@ -50,6 +50,8 @@ FILES_TO_DELETE=$(find $SOURCE_DIR -name "*.log" -mtime +14)
 while IFS= read -r filepath
 do
     echo -e "$Y Deleting Files $N" | tee -a $LOG_FILE
+    rm -rf $filepath
+    VALIDATE $? "Deleting Files"
 
 done <<< $FILES_TO_DELETE
 
