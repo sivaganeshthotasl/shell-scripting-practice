@@ -19,7 +19,7 @@ LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME"
 mkdir -p $LOG_FOLDER
 
 # Root User Validation
-$USER_ID="$(id -u)"
+USER_ID="$(id -u)"
 if [ $USER_ID -ne 0 ]
 then
      echo -e "$R ERROR: $N Please Procced with Root User"
