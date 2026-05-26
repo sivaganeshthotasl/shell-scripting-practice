@@ -93,10 +93,11 @@ then
             # Remove Old Files
             while IFS= read -r filepath
             do
-                echo -e "$B Deleting files:$N $filepath"
+                echo "Deleting file: $filepath" | tee -a $LOG_FILE
                 rm -rf $filepath
-                VALIDATE $? "Deleting Files"
+                VALIDATE $? "deleting files"
             done <<< $FILES
+          
      else
             echo -e "Zip File Creation Failure: $R Failure $N"
      fi
