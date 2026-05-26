@@ -61,17 +61,14 @@ then
      exit 1
 fi
 
-FILES=$(find "$SOURCE_DIR" -name "*.log" -mtime +"$DAYS") &>>"$LOG_FILE"
+FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
 
-if [ ! -z "$FILES" ]
+if [ ! -z $FILES ]
 then
-     echo "Files to zip are: $FILES"
-     TIME_STAMP="$(date +%F-%H-%M-%S)"
-     ZIP_FILE="$DESTINATION_DIR/app-logs-$TIME_STAMP.zip"
-     echo $FILES | zip -@ $ZIP_FILE &>>"$LOG_FILE"
-
+      echo "Files to zip are: $FILES"
+      TIME_STAMP="$(date +%F-%H-%M-%S)"
+      ZIP_FILE="$DESTINATION_DIR/app-logs-$TIME_STAMP.zip"
+      echo $FILES | zip -@ $ZIP_FILE
 else
-     echo -e "$R No Files Found Older than $DAYS days..Skipping $N"
-     exit 1
+      echo -e "No logs found older then 14 days...$Y Skipping $N"
 fi
-
