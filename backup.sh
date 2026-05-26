@@ -69,6 +69,7 @@ then
     TIMESTAMP=$(date +%F-%H-%M-%S)
     ZIP_FILE="$DEST_DIR/app-logs-$TIMESTAMP.zip"
     find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
+    echo "Zip file created at: $ZIP_FILE" | tee -a $LOG_FILE
 else
       echo -e "No log files found older than 14 days ... $Y SKIPPING $N"
 fi
