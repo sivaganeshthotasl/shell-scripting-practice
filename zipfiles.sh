@@ -96,24 +96,11 @@ then
       if [ -f "$ZIP_FILE" ]
       then
             echo -e "$G Successfully Created Zip File $N"
-            # Remove Old Files
-            while IFS= read -r filepath
-            do
-                echo "Deleting file: $filepath" | tee -a $LOG_FILE
-                rm -rf "$filepath"
-                VALIDATE $? "deleting files"
-            done <<< "$FILES"
-            echo -e "Log files older than $DAYS from source directory removed ... $G SUCCESS $N"
-          
-     else
+      else
             echo -e "Zip File Creation Failure: $R Failure $N"
-     fi
-else   
-     # Handle no-files condition
-      echo -e "$Y No Log Files found older then $DAYS days...Skipping $N" | tee -a $LOG_FILE # Print skipping message if no old log files found
+      fi
+    
+          
+else
+     echo -e "Zip File Creation Failure: $R Failure $N"
 fi
-
-
-
-
-
