@@ -97,6 +97,7 @@ then
                 rm -rf "$filepath"
                 VALIDATE $? "deleting files"
             done <<< "$FILES"
+            echo -e "Log files older than $DAYS from source directory removed ... $G SUCCESS $N"
           
      else
             echo -e "Zip File Creation Failure: $R Failure $N"
