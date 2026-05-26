@@ -96,7 +96,7 @@ then
                 echo -e "$B Deleting files:$N $filepath"
                 rm -rf $filepath
                 VALIDATE $? "Deleting Files"
-            done >>>$FILES
+            done >>> $FILES
      else
             echo -e "Zip File Creation Failure: $R Failure $N"
      fi
