@@ -63,7 +63,7 @@ fi
 # Validate Source Dir exist 
 if [ ! -d $SOURCE_DIR ]
 then
-      echo "$R Souce Directory $SOURCE_DIR $N doest not exist" | tee -a $LOG_FILE
+      echo -e "$R Souce Directory $SOURCE_DIR $N doest not exist" | tee -a $LOG_FILE
       exit 1
 fi
 
