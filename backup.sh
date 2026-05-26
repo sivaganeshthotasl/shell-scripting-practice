@@ -1,3 +1,4 @@
+# Start with shebang
 #!/bin/bash
 
 # Define Clour Varibles
