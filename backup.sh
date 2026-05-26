@@ -78,7 +78,7 @@ then
       #Print list of files selected for backup
       echo "$FILES"
       # Generate timestamp for zip file name
-      TIMESTAMP="$(date +%F-%H-%M-%S)"
+      TIME_STAMP="$(date +%F-%H-%M-%S)"
       # Create zip file path using destination directory and timestamp
       ZIP_FILE="$DESTINATION_DIR/app-logs-$TIME_STAMP.zip"
       # Pass log files to zip command using find command and pipe
