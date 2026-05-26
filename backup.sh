@@ -67,7 +67,7 @@ if [ -n "$FILES" ]
 then
      echo "Files to zip are: $FILES"
      TIME_STAMP="$(date +%F-%H-%S)"
-     ZIP_FILE="$DESTINATION_DIR/app-logs/$TIME_STAMP.zip"
+     ZIP_FILE="$DESTINATION_DIR/app-logs-$TIME_STAMP.zip"
      echo  $FILES | zip -@ $FILES
 
 
