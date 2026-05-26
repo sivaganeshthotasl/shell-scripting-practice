@@ -1,75 +1,87 @@
 #!/bin/bash
 
-# Colours Format
+# Define Clour Varibles
 R="\e[31m"
 G="\e[32m"
 Y="\e[33m"
 B="\e[34m"
 N="\e[0m"
 
-SOURCE_DIR="$1"
-DESTINATION_DIR="$2"
-DAYS=${3:-14}
+# Read command line arguments
+SOURCE_DIR="$1"   # Source directory
+DESTINATION_DIR="$2"  #  Destination directory
+DAYS="{3:-14}" # Optional days value with default as 14
 
+# Configure Log Folder Path
 LOG_FOLDER="/var/log/shellscript-logs"
+# Get Script Name Dynamically
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
+# Configure Log File patch using script name
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
+# Create Log Folder if it does not exist
+mkdir -p $LOG_FOLDER
 
-mkdir -p "$LOG_FOLDER"
-
-# Root User Validation
-
+# Root User Validation Check (Get user id and validate whether script is running with root user)
 USER_ID="$(id -u)"
-
-if [ "$USER_ID" -ne 0 ]
+if [ $USER_ID -ne 0 ]
 then
-     echo -e "$R ERROR: $N Please Proceed with Root User"
-     exit 1
+      echo -e "$R ERROR: $N Please Proceed with Root User" | tee -a $LOG_FILE
+      exit 1
 else
-     echo -e "$G You are Running With Root User $N"
+      echo -e "$Y You are Running with Root User $N" | tee -a $LOG_FILE
 fi
 
+# Create Validate Function
 VALIDATE(){
-    if [ "$1" -eq 0 ]
-    then
-         echo -e "$G $2 is....Success $N"
-    else
-         echo -e "$R $2 is....Failed $N"
-         exit 1
-    fi
+     if [ $1 -eq 0 ]
+     then
+           echo -e "$G $2 is....SUCCESS $N" | tee -a $LOG_FILE
+     else
+           echo -e "$R $2 is....FAILED $N" | tee -a $LOG_FILE
+           exit 1
+     fi
 }
 
+# Create Usage Function (show how to execute script properly)
 USAGE(){
-    echo -e "$R USAGE: $N sh backup.sh <source_dir> <destination_dir> <days(optional)>"
-    exit 1
+     echo -e "$B sh backup.sh <source_dir> <destination_dir> <days (otptional)>" | tee -a $LOG_FILE
+
 }
 
+#  Validate minimum required arguments are passed
 if [ $# -lt 2 ]
 then
-    USAGE
+      echo USAGE
 fi
 
-if [ ! -d "$SOURCE_DIR" ]
+# Validate Source Dir exist 
+if [ ! -d $SOURCE_DIR]
 then
-     echo -e "$R Source Directory $SOURCE_DIR does not exist $N Please check"
-     exit 1
+      echo "$R Souce Directory $SOURCE_DIR $N doest not exist" | tee -a $LOG_FILE
+      exit 1
 fi
 
-if [ ! -d "$DESTINATION_DIR" ]
+# Validate Destination Dir Exist
+if [ ! -d $DESTINATION_DIR ]
 then
-     echo -e "$R Destination Directory $DESTINATION_DIR does not exist $N Please Check"
-     exit 1
+      echo -e "$R Destination Directory $DESTINATION_DIR $N does not exist" | tee -a $LOG_FILE
+      exit 1
 fi
 
-FILES=$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)
+# Find LOG files older then 14 days from source directory
+FILES="$(find $SOURCE_DIR -name ".log" -mtime +$DAYS)" &>>$LOG_FILE
 
-if [ ! -z "$FILES" ]
+# Check whether log files are available 
+if [ -n $FILES]
 then
-    echo "Files to zip are: $FILES"
-    TIMESTAMP=$(date +%F-%H-%M-%S)
-    ZIP_FILE="$DESTINATION_DIR/app-logs-$TIMESTAMP.zip"
-    find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
-    echo "Zip file created at: $ZIP_FILE" | tee -a $LOG_FILE
+      echo " File to zip are : "
+      echo "$FILES"
+      TIMESTAMP="$(date +%F-%H-%M-%S)"
+      ZIP_FILE="$DESTINATION_DIR/app-logs-$TIME_STAMP"
+      find $SOURCE_DIR -name "*.log" -mt +$DAYS | zip -@ $ZIP_FILE &>>$LOG_FILE
+      VALIDATE $? "Zipping Log Files"
+      echo -e "$G zip files are created at:$N $ZIP_FILE"  | tee -a $LOG_FILE
 else
-      echo -e "No log files found older than 14 days ... $Y SKIPPING $N"
+      echo -e "$Y No Log Files found older then $DAYS days...Skipping $N" | tee -a $LOG_FILE
 fi
+
