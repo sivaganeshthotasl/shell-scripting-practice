@@ -11,7 +11,7 @@ N="\e[0m"
 # Read command line arguments
 SOURCE_DIR="$1"   # Source directory
 DESTINATION_DIR="$2"  #  Destination directory
-DAYS="{3:-14}" # Optional days value with default as 14
+DAYS="${3:-14}" # Optional days value with default as 14
 
 # Configure Log Folder Path
 LOG_FOLDER="/var/log/shellscript-logs"
@@ -56,7 +56,7 @@ then
 fi
 
 # Validate Source Dir exist 
-if [ ! -d $SOURCE_DIR]
+if [ ! -d $SOURCE_DIR ]
 then
       echo "$R Souce Directory $SOURCE_DIR $N doest not exist" | tee -a $LOG_FILE
       exit 1
