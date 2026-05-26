@@ -1,4 +1,3 @@
-# Start with shebang
 #!/bin/bash
 
 # Define Clour Varibles
@@ -76,13 +75,37 @@ FILES="$(find $SOURCE_DIR -name ".log" -mtime +$DAYS)" &>>$LOG_FILE
 if [ -n $FILES]
 then
       echo " File to zip are : "
+      #Print list of files selected for backup
       echo "$FILES"
+      # Generate timestamp for zip file name
       TIMESTAMP="$(date +%F-%H-%M-%S)"
+      # Create zip file path using destination directory and timestamp
       ZIP_FILE="$DESTINATION_DIR/app-logs-$TIME_STAMP"
-      find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE &>>$LOG_FILE
-      VALIDATE $? "Zipping Log Files"
-      echo -e "$G zip files are created at:$N $ZIP_FILE"  | tee -a $LOG_FILE
-else
-      echo -e "$Y No Log Files found older then $DAYS days...Skipping $N" | tee -a $LOG_FILE
+      # Pass log files to zip command using find command and pipe
+      find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE &>>$LOG_FILE   
+      VALIDATE $? "Zipping Log Files" # Validate zip command execution status
+      # Print success message with zip file location
+      echo -e "$G zip files are created at:$N $ZIP_FILE"  | tee -a $LOG_FILE 
+      # check wheter zip exist or not
+      if [ -f $ZIP_FILE ]
+      then
+            echo -e "$G Successfully Created Zip File $N"
+            # Remove Old Files
+            while IFS= read -r filepath
+            do
+                echo -e "$B Deleting files:$N $filepath"
+                rm -rf $filepath
+                VALIDATE $? "Deleting Files"
+            done >>>$FILES
+     else
+            echo -e "Zip File Creation Failure: $R Failure $N"
+     fi
+else   
+     # Handle no-files condition
+      echo -e "$Y No Log Files found older then $DAYS days...Skipping $N" | tee -a $LOG_FILE # Print skipping message if no old log files found
 fi
+
+
+
+
 
