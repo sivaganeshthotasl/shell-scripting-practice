@@ -102,5 +102,5 @@ then
     
           
 else
-     echo -e "Zip File Creation Failure: $R Failure $N"
+     echo -e "$Y No Log Files found older then $DAYS days...Skipping $N" | tee -a $LOG_FILE # Print skipping message if no old log files found
 fi
