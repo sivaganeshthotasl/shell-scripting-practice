@@ -72,7 +72,7 @@ fi
 FILES="$(find $SOURCE_DIR -name "*.log" -mtime +$DAYS)" &>>$LOG_FILE
 
 # Check whether log files are available 
-if [ -n $FILES ]
+if [ -n "$FILES" ]
 then
       echo " File to zip are : "
       #Print list of files selected for backup
