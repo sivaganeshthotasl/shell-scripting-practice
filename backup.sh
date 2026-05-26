@@ -79,7 +79,7 @@ then
       echo "$FILES"
       TIMESTAMP="$(date +%F-%H-%M-%S)"
       ZIP_FILE="$DESTINATION_DIR/app-logs-$TIME_STAMP"
-      find $SOURCE_DIR -name "*.log" -mt +$DAYS | zip -@ $ZIP_FILE &>>$LOG_FILE
+      find $SOURCE_DIR -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE &>>$LOG_FILE
       VALIDATE $? "Zipping Log Files"
       echo -e "$G zip files are created at:$N $ZIP_FILE"  | tee -a $LOG_FILE
 else
