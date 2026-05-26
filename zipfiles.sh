@@ -21,7 +21,7 @@ DAYS="${3:-14}" # Optional days value with default as 14
 # Configure Log Folder Path
 LOG_FOLDER="/var/log/shellscript-logs"
 # Get Script Name Dynamically
-SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
+SCRIPT_NAME=$(basename "$0" .sh)
 # Configure Log File patch using script name
 LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 # Create Log Folder if it does not exist
