@@ -14,6 +14,6 @@ do
             MSG="High Disk Usage On $PARTITION: $USAGE"
      if 
 
-done <<< $DISK_USAGE
+done <<< "$DISK_USAGE"
 
 echo "$MSG" 
