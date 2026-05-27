@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DISK_USAGE="$(df -hT | grep -v filesystem)"
-DISK_THRESHOLD="1" # in project it will be 75 %
+DISK_THRESHOLD=1 # in project it will be 75 %
 
 
 
