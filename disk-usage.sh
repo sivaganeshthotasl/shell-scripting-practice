@@ -11,4 +11,4 @@ do
      PARTITION=$(echo "$line" | awk '{print $7f}')
      echo "$PARTITION: $USAGE"
 
-done >>> $DISK_USAGE
+done <<< $DISK_USAGE
