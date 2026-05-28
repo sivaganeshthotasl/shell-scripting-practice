@@ -2,7 +2,7 @@
 
 DISK_USAGE="$(df -hT | grep -v filesystem)"
 DISK_THRESHOLD=1
-
+MSG=""
 
 while IFS= read line
 do
