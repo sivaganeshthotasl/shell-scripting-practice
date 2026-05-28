@@ -14,4 +14,6 @@ do
      fi
 
 
-done
+done <<< $DISK_USAGE
+
+echo $MSG 
