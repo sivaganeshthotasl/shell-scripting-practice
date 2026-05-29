@@ -1,5 +1,7 @@
 #!/bin/bash
 
-readonly COMPANY="CGI"
+COMPANY="TCS"
+readonly $COMPANY
 
+# Print the Variable using echo
 echo "$COMPANY"
