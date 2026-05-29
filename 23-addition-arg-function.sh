@@ -8,5 +8,7 @@ ADD(){
 
 }
 
-ADD $1 $2
+# Call Function Name
+ADD 10 20
+# ADD $1 $2  # means Passing arguments to a function.
 
