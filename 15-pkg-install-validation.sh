@@ -18,14 +18,15 @@ then
      echo "Please Run this Scritp with Root User"
 else
      echo "You are Running with Root User"
+fi
 
 # VALIDATE FUNCATION
 VALIDATE(){
     if [ $1 -eq 0 ]
     then
-         echo "$2 is........SUCCESS"
+         echo "$2 is........SUCCESS" | tee -a $LOG_FILE
     else
-         echo "$2 is........FAILED"
+         echo "$2 is........FAILED" | tee -a $LOG_FILE
     fi
 }
 
