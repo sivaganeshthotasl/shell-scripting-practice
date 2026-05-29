@@ -2,7 +2,7 @@
 
 # String Empty check status
 
-NAME=""
+NAME="Siva"
 
 if [ -z "$NAME" ]
 then
