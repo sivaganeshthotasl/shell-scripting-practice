@@ -11,3 +11,7 @@ ARTIFACT_URL="https://roboshop-builds.s3.amazonaws.com/catalogue.zip"
 
 curl -o /tmp/catatalogue.zip $ARTIFACT_URL
 
+echo "Downloading........SUCCESS"
+
+
+
