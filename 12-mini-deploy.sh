@@ -14,7 +14,7 @@ mkdir -p $LOG_FOLDER
 
 echo "Deploying "$COMPONENT".........." &>>$LOG_FOLDER
 
-dnf install $COMPONENT -y &>>$LOG_FOLDER
+dnf install $COMPONENT -y  &>>$LOG_FOLDER
 
 # Print Success Statement
 echo ""$COMPONENT" installing is.......SUCCESS"
