@@ -12,7 +12,7 @@ LOG_FILE="$LOG_FOLDER/$SCRIPT_NAME.log"
 # Create Log Folder
 mkdir -p $LOG_FOLDER
 
-echo "Deploying "$COMPONENT".........." &>>$LOG_FOLDER
+echo "Deploying "$COMPONENT".........."
 
 dnf install $COMPONENT -y  &>>$LOG_FOLDER
 
