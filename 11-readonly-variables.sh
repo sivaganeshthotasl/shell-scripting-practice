@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create Variable
-COMPANY="TCS"
+COMPANY="CGI"
 
 # Make Variable readlonly
 readonly COMPANY
@@ -9,10 +9,5 @@ readonly COMPANY
 # Print the current value
 echo "Before change: $COMPANY"
 
-# Try Change the Value
-COMPANY=CGI
 
-# Print Again
-
-echo "After Change: $COMPANY"
 
