@@ -10,7 +10,7 @@ CHECK_ROOT(){
          exit 1
     else
          echo "You are Running with Root User"
-    else
+    fi
 }
 
 # Calling Check Root Function
