@@ -35,7 +35,7 @@ VALIDATE(){
 # # Installing Package
 PACKAGE="nginx"
 dnf install "$PACKAGE" -y &>>$LOG_FILE
-VALIDATE $? ""$PACKAGE"Installing"
+VALIDATE $? ""$PACKAGE" Installing"
 
 # Service check status
 systemctl is-active "$PACKAGE" &>>$LOG_FILE
