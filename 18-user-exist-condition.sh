@@ -26,10 +26,11 @@ id roboshop
 
 if [ $? -ne 0 ]
 then
-     echo "ERROR::"$USER_ID" is Doesn't Exit"
-    useradd roboshop
+     echo "ERROR: roboshop user is Doesn't Exit"
+     useradd roboshop 
+     VALIDATE $? "Creting User"
 else
-     echo "$USER_ID is already Exit....Skpping"
+     echo "User is already Exit....Skpping"
 fi
 
 
