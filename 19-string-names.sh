@@ -4,12 +4,13 @@
 
 # String Variable
 
-#NAME="$1" 
+NAME="$1" 
 
-echo "Your Name is:"
+# echo "Your Name is:" # Setting up User input
 
-read NAME
+# read NAME   # read is used to store user input 
 
+#NAME="SIVA"
 if [ "$NAME" = "Siva Ganesh Thota SL" ]
 then
       echo "Names Are Matching....."
