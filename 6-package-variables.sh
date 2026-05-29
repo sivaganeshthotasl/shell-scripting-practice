@@ -15,7 +15,7 @@
 
 MYSQL_PACKAGE="mysql"
 REDIS_PACKAGE="redis"
-MONGODB_PACKAGE="mongodb"
+MONGODB_PACKAGE="mongodb-org"
 
 # Install Using Variable
 dnf install "$MYSQL_PACKAGE" -y
