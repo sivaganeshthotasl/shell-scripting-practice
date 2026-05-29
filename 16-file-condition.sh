@@ -3,7 +3,7 @@
 # Check whether File exits /etc/passwd
 
 # Create a File path Varialbe
-FILE_PATH="/etc/passwd"
+FILE_PATH="/etc/passwdd"
 
 # Check wheter file extis
 
