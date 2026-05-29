@@ -4,13 +4,13 @@
 
 # String Variable
 
-#NAME="$1"
+#NAME="$1" 
 
 echo "Your Name is:"
 
 read NAME
 
-if [ "$NAME" = "Siva" ]
+if [ "$NAME" = "Siva Ganesh Thota SL" ]
 then
       echo "Names Are Matching....."
 else
