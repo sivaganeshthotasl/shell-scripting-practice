@@ -4,7 +4,7 @@
 
 # String Variable
 
-NAME="Siva"
+NAME="$1"
 
 if [ "$NAME" = "Siva" ]
 then
