@@ -1,7 +1,18 @@
 #!/bin/bash
 
+# Create Variable
 COMPANY="CGI"
+
+# Make Variable readlonly
 readonly COMPANY
 
-# Print the Variable using echo
-echo "$COMPANY"
+# Print the current value
+echo "Before change: $COMPANY"
+
+# Try Change the Value
+COMPANY=CGI
+
+# Print Again
+
+echo "After Change: $COMPANY"
+
