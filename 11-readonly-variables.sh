@@ -1,5 +1,5 @@
 #!/bin/bash
 
-readonly COMPANY="TCS"
+readonly COMPANY="CGI"
 
 echo "$COMPANY"
