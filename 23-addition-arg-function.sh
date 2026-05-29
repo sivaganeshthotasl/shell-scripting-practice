@@ -3,7 +3,7 @@
 # # Create Addition Function Addition 
 
 ADD(){
-    RESULT(($1+$2))
+    RESULT=$(($1+$2))
     echo "Addition is: "$RESULT""
 
 }
