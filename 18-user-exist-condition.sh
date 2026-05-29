@@ -22,9 +22,9 @@ VALIDATE(){
     fi
 }
 
-USER_ID="$(id roboshop)"
+id roboshop
 
-if [ $USER_ID -ne 0 ]
+if [ $? -ne 0 ]
 then
      echo "ERROR::"$USER_ID" is Doesn't Exit"
     useradd roboshop
