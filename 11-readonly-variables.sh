@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COMPANY="TCS"
+COMPANY="CGI"
 readonly $COMPANY
 
 # Print the Variable using echo
