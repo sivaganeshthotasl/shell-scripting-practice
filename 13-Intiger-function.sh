@@ -4,7 +4,7 @@
 
 # Create Number Variable
 
-NUMBER=10
+NUMBER=1
 
 # Check if number is greater than 5
 
