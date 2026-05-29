@@ -4,7 +4,11 @@
 
 # String Variable
 
-NAME="$1"
+#NAME="$1"
+
+echo "Your Name is:"
+
+read NAME
 
 if [ "$NAME" = "Siva" ]
 then
