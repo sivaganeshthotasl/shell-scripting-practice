@@ -4,7 +4,7 @@
 
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | basename "." sh)"
-LOG_FILE=""$LOG_FOLDER"/"$SCRIPT_NAME".log"
+LOG_FILE=""$LOG_FOLDER"/$SCRIPT_NAME.log"
 
 # Print Log File Path
 
