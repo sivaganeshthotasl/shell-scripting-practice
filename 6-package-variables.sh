@@ -10,5 +10,5 @@ dnf install "$PACKAGE" -y
 
 # Print Installing nginx.......
 
-echo "Installing "$PACKAGE"......."
+echo "Installing "$PACKAGE".......SUCCESS"
 
