@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Desctipion= Service Check Status
+# Description= Service Check Status
 
 # LOG Configuration Set UP
 LOG_FOLDER="/var/log/shellscript-logs"
@@ -32,20 +32,20 @@ VALIDATE(){
 
 }
 
-# Installing Pakage
+# # Installing Package
 PACKAGE="nginx"
-dnf install $PACKAGE -y &>>$LOG_FILE
-VALIDATE $? "Nginx Installing"
+dnf install "$PACKAGE" -y &>>$LOG_FILE
+VALIDATE $? ""$PACKAGE"Installing"
 
 # Service check status
-systemctl status nginx &>>$LOG_FILE
+systemctl is-active "$PACKAGE" &>>$LOG_FILE
 if [ $? -ne 0 ]
 then
-     echo "ERROR::Nginx is not Running"
-     systemctl enable nginx &>>$LOG_FILE
-     systemctl start nginx  &>>$LOG_FILE
-     VALIDATE $? "Enabling & Starting Nginx"
+     echo "ERROR::"$PACKAGE" is not Running"
+     systemctl enable "$PACKAGE" &>>$LOG_FILE
+     systemctl start "$PACKAGE"  &>>$LOG_FILE
+     VALIDATE $? "Enabling & Starting "$PACKAGE""
 else
-     echo "Nginx is Already Running....Active" | tee -a $LOG_FILE
+     echo ""$PACKAGE" is Already Running....Active" | tee -a $LOG_FILE
 fi
 
