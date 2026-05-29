@@ -2,15 +2,14 @@
 
 # Package Installation Variables
 
-# PACKAGE="nginx"
+PACKAGE="nginx"
 
-# # Install Using Variable
+# Install Using Variable
 
-# dnf install "$PACKAGE" -y
+dnf install "$PACKAGE" -y
 
-# # Print Installing nginx.......
-
-# echo "Installing "$PACKAGE".......SUCCESS"
+ # Print Installing nginx.......
+echo "Installing "$PACKAGE".......SUCCESS"
 
 
 MYSQL_PACKAGE="mysql"
