@@ -29,11 +29,20 @@ VALIDATE(){
 
 # To check Validate function install nginx and redis packages. i am using here array variables instead creating two saperate package name variables.
 
-PACKAGES=("nginx" "redis")
+# PACKAGES=("nginx" "redis")
 
-for PACKAGE in "${PACKAGES[@]}"
-do
-    dnf install $PACKAGE -y
-    VALIDATE $? "$PACKAGES Installing"
-done
+# for PACKAGE in "${PACKAGES[@]}"
+# do
+#     dnf install $PACKAGE -y
+#     VALIDATE $? "$PACKAGES Installing"
+# done
 
+# Note Run sh script.sh nginx reids   > it installs both packages and validate successfully installed or not.
+
+
+# The other option is you can just simply give packages names like
+
+dnf install nginx -y
+VALIDATE $? "Nginx Installing"
+dnf install redis -y
+VALIDATE $? "Redis Installing"
