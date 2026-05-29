@@ -15,7 +15,8 @@ mkdir -p $LOG_FOLDER
 USER_ID="$(id -u)"
 if [ $USER_ID -ne 0 ]
 then
-     echo "Please Run this Scritp with Root User"
+     echo "ERROR: Please Run this Scritp with Root User"
+     exit 1
 else
      echo "You are Running with Root User"
 fi
@@ -27,6 +28,7 @@ VALIDATE(){
          echo "$2 is........SUCCESS" | tee -a $LOG_FILE
     else
          echo "$2 is........FAILED" | tee -a $LOG_FILE
+         exit 1
     fi
 }
 
