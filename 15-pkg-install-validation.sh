@@ -35,5 +35,5 @@ VALIDATE(){
 # Installing Nginx.
 PACKAGE="nginx"
 dnf install $PACKAGE -y &>>$LOG_FILE
-VALIDATE $? "Nginx is installing"
+VALIDATE $? "Nginx installing"
 
