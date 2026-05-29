@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Create Variable
-COMPANY="CGI"
+COMPANY="TCS"
 
 # Make Variable readlonly
 readonly COMPANY
