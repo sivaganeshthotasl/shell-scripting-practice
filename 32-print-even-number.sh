@@ -8,7 +8,7 @@ EVEN_NUMBER=2
 
 while [ $EVEN_NUMBER -le 20 ]
 do
-       echo "Even Numbers: "$EVEN_NUMBER""
+       echo  "$EVEN_NUMBER"
        EVEN_NUMBER="$(($EVEN_NUMBER+2))"
 
 done
