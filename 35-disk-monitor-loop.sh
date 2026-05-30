@@ -8,9 +8,9 @@ done
 
 USAGE_VALUE=$(echo $USAGE | cut -d "%" -f1)
 
-if [ $USAGE_VALUE -gt 30 ]
+if [ $USAGE_VALUE -gt 70 ]
 then
-     echo "$MOUNTPOINT -> $USAGE"
+    echo "ALERT: $MOUNTPOINT -> $USAGE"
 fi
 
 
