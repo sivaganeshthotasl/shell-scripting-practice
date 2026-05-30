@@ -10,16 +10,18 @@ USERS=("dev" "test" "prod")
 for user in "${USERS[@]}"
 do
      id "$USERS"
-     if [ $USERS -ne 0 ]
+     if [ $? -eq 0 ]
      then
-         echo "ERROR: User is doesn't exist"
-         useradd $USERS
+         echo "Users are already exist"
+         
      else
-         echo "$USERS are already exist"
+         echo "User are doesn't exist"
+         useradd $USERS
+         echo "$USERS are created Successfully"
     fi
 
 done
 
 
-echo "$USERS are created Successfully"
+
 
