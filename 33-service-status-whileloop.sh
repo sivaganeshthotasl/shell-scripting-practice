@@ -9,7 +9,7 @@ STATUS="$(systemctl is-active $PACKAGE)"
 while [ "$STATUS" != "active" ]
 do
       echo ""$PACKAGES" is not running"
-      sleep 5
+      sleep 1
 
       STATUS="$(systemctl is-active $PACKAGE)"
 done
