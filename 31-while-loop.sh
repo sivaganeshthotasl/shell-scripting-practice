@@ -8,7 +8,7 @@ COUNT=1
 
 while [ $COUNT -le 10 ]
 do
-     echo "$COUNT"
+     echo "Number: $COUNT"
      COUNT=$(($COUNT+1))
 done
 
