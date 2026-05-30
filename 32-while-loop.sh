@@ -2,7 +2,7 @@
 
 # Print Multiplication
 
-NUMBER=5
+NUMBER=1
 
 while [ $NUMBER -le 50 ]
 do
