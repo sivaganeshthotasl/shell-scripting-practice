@@ -1,16 +1,17 @@
 #!/bin/bash
 
-# Service Health Check
+# Check if nginx is active
 
 PACKAGE="nginx"
 
-# While loop starts
-systemctl is-active $PACKAGE
+STATUS="$(systemctl is-active $PACKAGE)"
 
-while [ $PACKAGE -ne 0 ]
+while [ "$STATUS" != "active"]
 do
-      echo "Status is: $PACKAGE"
-      
+      echo ""$PACKAGES" is not running"
+      sleep 5
+
+      STATUS="$(systemctl is-active $PACKAGE)"
 done
 
-       
+echo ""$PACKAGE" is...RUNNING"
