@@ -6,12 +6,6 @@ do
        echo "Usage: $USAGE"
 done
 
-USAGE_VALUE=$(echo $USAGE | cut -d "%" -f1)
-
-if [ -n "$USAGE_VALUE" ] && [ "$USAGE_VALUE" -gt 70 ]
-then
-    echo "ALERT: $MOUNTPOINT -> $USAGE"
-fi
 
 
 
