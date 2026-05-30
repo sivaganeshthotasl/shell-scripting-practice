@@ -9,7 +9,7 @@
 
 
 
-DISK_USAGE=$(df -hT)
+DISK_USAGE=$(df -hT | tail -n +2)
 
 while read $DISK_USAGE
 do
