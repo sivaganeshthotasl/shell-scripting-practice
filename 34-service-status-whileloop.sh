@@ -26,3 +26,4 @@ do
        echo "Attempt $COUNT : $STATUS"
        COUNT="$(($COUNT+1))"
 done
+
