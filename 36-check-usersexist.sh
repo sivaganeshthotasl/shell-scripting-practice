@@ -16,7 +16,6 @@ VALIDATE(){
 
 }
 
- 
 
 USERS=("siva" "thota" "ganesh")
 
