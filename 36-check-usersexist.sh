@@ -18,22 +18,22 @@ VALIDATE(){
 
  
 
-USERS=("dev" "test" "prod")
+USERS=("siva" "thota" "ganesh")
 
-
-for USER in "${USERS[@]}"
+for USER in "${$USERS[@]}"
 do
-     id "$USER" &>/dev/null
+     id "$USER"
      if [ $? -eq 0 ]
      then
-          echo "User $USER already exists"
+          echo "users are already exit"
      else
-          useradd "$USER"
-          VALIDATE $? "Creating Users"
-          echo "$USER created Successfull"
-
-     fi
+         useradd $USER
+         VALIDATE $? "Creating User"
+         echo "$USER are created succesfully"
+    fi
 done
+
+
 
 
 
