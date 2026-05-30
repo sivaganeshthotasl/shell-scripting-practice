@@ -6,7 +6,7 @@ PACKAGE="nginx"
 
 STATUS="$(systemctl is-active $PACKAGE)"
 
-while [ "$STATUS" != "active"]
+while [ "$STATUS" != "active" ]
 do
       echo ""$PACKAGES" is not running"
       sleep 5
