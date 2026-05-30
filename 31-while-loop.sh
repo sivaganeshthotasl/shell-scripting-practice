@@ -2,10 +2,10 @@
 
 # Loop Condition
 
-NUMBERS=1 to 10
+NUMBERS=1
 
 
-while [ $NUMBERS ]
+while [ $NUMBERS to 10 ]
 do
       echo "$NUMBERS"
 done
