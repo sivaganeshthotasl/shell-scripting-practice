@@ -20,7 +20,7 @@
 PACKAGE="nginx"
 COUNT=1
 
-while [ $PACKAGE -le 5 ]
+while [ $COUNT -le 5 ]
 do
        STATUS="$(systemctl is-active nginx)"
        echo "Attempt $COUNT : $STATUS"
