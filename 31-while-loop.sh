@@ -1,14 +1,15 @@
 #!/bin/bash
 
-# Loop Condition
+# Print 1 to 10 using a Counter
 
-NUMBERS=1
+COUNT=1
 
+#Loop Condition
 
-while [ $NUMBERS to 10 ]
+while [ $COUNT -le 10 ]
 do
-      echo "$NUMBERS"
+     echo "$COUNT"
+     COUNT=$(($COUNT+1))
 done
-
 
 
