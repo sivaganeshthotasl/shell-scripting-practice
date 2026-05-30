@@ -20,7 +20,7 @@ VALIDATE(){
 
 USERS=("siva" "thota" "ganesh")
 
-for USER in "${$USERS[@]}"
+for USER in "${USERS [@]}" 
 do
      id "$USER"
      if [ $? -eq 0 ]
@@ -32,6 +32,7 @@ do
          echo "$USER are created succesfully"
     fi
 done
+
 
 
 
