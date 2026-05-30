@@ -1,10 +1,23 @@
 #!/bin/bash
 
-df -hT | tail -n +2 | while read FILESYSTEM TYPE SIZE USED AVAIL USAGE MOUNTPOINT
+# df -hT | tail -n +2 | while read FILESYSTEM TYPE SIZE USED AVAIL USAGE MOUNTPOINT
+# do
+#        echo "Partition:  $MOUNTPOINT"
+#        echo "Usage: $USAGE"
+# done
+
+
+
+
+DISK_USAGE=$(df -hT)
+
+while read $DISK_USAGE
 do
-       echo "Partition:  $MOUNTPOINT"
-       echo "Usage: $USAGE"
+     echo "Partiion: $7"
+     echo "Usage: $6"
+
 done
+
 
 
 
