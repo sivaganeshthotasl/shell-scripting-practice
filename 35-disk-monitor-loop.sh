@@ -11,7 +11,7 @@
 
 DISK_USAGE=$(df -hT | tail -n +2)
 
-while read $DISK_USAGE
+while  [ $DISK_USAGE ]
 do
      echo "Partiion: $7"
      echo "Usage: $6"
