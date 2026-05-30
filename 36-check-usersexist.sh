@@ -3,7 +3,6 @@
 
 # Check if users are exit
 
-USERS=("dev" "test" "prod")
 
 
 VALIDATE(){
@@ -17,22 +16,23 @@ VALIDATE(){
 
 }
 
-# Loop Starts here
+ 
 
-for user in "${USERS[@]}"
+USERS=("dev" "test" "prod")
+
+
+for USER in "${USERS[@]}"
 do
-     id "$USERS"
+     id "$USER" &>/dev/null
      if [ $? -eq 0 ]
      then
-         echo "Users are already exist"
-         
+          echo "User $USER already exists"
      else
-         echo "User are doesn't exist"
-         useradd $USERS
-         VALIDATE $? "$USERS are Creating"
-         echo "$USERS are created Successfully"
-    fi
+          useradd "$USER"
+          VALIDATE $? "Creating Users"
+          echo "$USER created Successfull"
 
+     fi
 done
 
 
