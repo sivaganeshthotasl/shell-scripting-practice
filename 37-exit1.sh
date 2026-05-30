@@ -2,7 +2,7 @@
 
 # if Mysql install fails
 
-PACKAGE="mysql-server"
+PACKAGE="mysql-server" "nginx"
 
 dnf install $PACKAGE -y
 
