@@ -1,9 +1,9 @@
 #!/bin/bash
 
 # Multiple arguments
-NAME="Siva Ganesh Thota SL"
-COMPANY="Benz"
-LOCATION="Singapore"
+NAME="$1"
+COMPANY="$2"
+LOCATION="$3"
 
 # Print all arguments
 echo "My Name is $NAME"
