@@ -5,7 +5,7 @@ set -e
 # Errot Handling using Validation Function
 
 # package variable
-PACKAGE="reiss"
+PACKAGE="redis"
 LOG_FOLDER="/var/log/shellscript-logs"
 SCRIPT_NAME="$(echo $0 | cut -d "." -f1)"
 LOG_FILE=""$LOG_FOLDER"/"$SCRIPT_NAME".log"
