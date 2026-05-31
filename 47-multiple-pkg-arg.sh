@@ -4,6 +4,6 @@ PACKAGES=("$1" "$2" "$3")  # you can use ("$@") this is good approach. instead o
 
 
 
-dnf install "${$PACKAGES[@]}" -y
+dnf install "${PACKAGES[@]}" -y
 
 
