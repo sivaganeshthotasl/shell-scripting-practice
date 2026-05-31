@@ -26,3 +26,7 @@ VALIDATE(){
 
 dnf install nginxw -y &>>$LOG_FILE  # i given wrong package so we can see the error how validate is handling as well as how error logging will help us troubleshoot.
 VALIDATE $? "Nginx Installing"  
+
+# NOTE: this script is all about logging and error handling. here we used trap as well to know which has sytanx errors. if you run this script you will see two types of error handlings. you observe and troubleshoot it. fix the errors.
+
+
