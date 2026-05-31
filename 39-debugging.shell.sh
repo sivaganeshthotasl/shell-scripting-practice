@@ -8,4 +8,4 @@ set -x
 PACKAGE="nginx"
 
 dnf install $PACKAGE -y
-systemctl status $package
+systemctl status $PACKAGE
