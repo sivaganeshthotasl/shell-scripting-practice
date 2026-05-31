@@ -32,3 +32,12 @@ else
      VALIDATE $? "Redis Installing"
 fi
 
+
+
+# Alway prefer this below example whenever you want check whether it's installed or not / is-active or not 
+
+# Preferred
+# if systemctl is-active nginx &>/dev/null
+# then
+#     echo "Nginx is running"
+# fi

@@ -3,7 +3,7 @@
 
 # Debbugging shell scripting using set -x
 
-set -x
+set -x # it shows executed commands, Variable exapansion, Loop execution, 
 
 PACKAGE="mysql-server"
 PACKAGE_START="mysqld"
