@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-set -e
 # Errot Handling using Validation Function
 
 # package variable
@@ -31,6 +29,6 @@ then
 else
      echo "$PACKAGE is not installed..Going to Install" | tee -a $LOG_FILE
      dnf install $PACKAGE -y &>>$LOG_FILE
-     VALIDATE $? "Nginx Installing"
+     VALIDATE $? "Redis Installing"
 fi
 
