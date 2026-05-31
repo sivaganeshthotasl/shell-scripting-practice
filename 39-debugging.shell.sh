@@ -5,7 +5,7 @@
 
 set -x
 
-PACKAGE="msql-server"
+PACKAGE="msql"
 
 dnf install $PACKAGE -y
 systemctl status $package
