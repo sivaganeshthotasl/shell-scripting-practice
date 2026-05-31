@@ -6,7 +6,8 @@
 set -x
 
 PACKAGE="mysql-server"
+PACKAGE_START="mysqld"
 
 dnf install $PACKAGE -y
-systemctl start $PACKAGE
-systemctl status $PACKAGE
+systemctl start $PACKAGE_START
+systemctl status $PACKAGE_START
