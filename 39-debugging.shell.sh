@@ -8,4 +8,5 @@ set -x
 PACKAGE="mysql-server"
 
 dnf install $PACKAGE -y
+systemctl start $PACKAGE
 systemctl status $PACKAGE
