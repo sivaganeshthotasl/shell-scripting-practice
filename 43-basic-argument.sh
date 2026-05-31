@@ -6,7 +6,7 @@ LOCATION="Singapore"
 
 echo "My Name is $NAME"
 echo "I work in $COMPANY"
-echo "My Work Location is: $LOCATION"
+echo "My Work Location is $LOCATION"
 
 
 
