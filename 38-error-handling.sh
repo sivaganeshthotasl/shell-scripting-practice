@@ -1,5 +1,6 @@
 #!/bin/bash
 
+set -x
 # Errot Handling using Validation Function
 
 # package variable
