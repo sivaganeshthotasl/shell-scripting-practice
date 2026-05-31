@@ -28,7 +28,7 @@ then
      echo "$PACKAGE is already installed...Nothing to do" | tee -a $LOG_FILE
 else
      echo "$PACKAGE is not installed..Going to Install" | tee -a $LOG_FILE
-     dnf install $package -y &>>$LOG_FILE
+     dnf install $PACKAGE -y &>>$LOG_FILE
      VALIDATE $? "Nginx Installing"
 fi
 
