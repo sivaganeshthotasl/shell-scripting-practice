@@ -5,7 +5,7 @@
 
 set -x
 
-PACKAGE="nginx"
+PACKAGE="mysql-server"
 
 dnf install $PACKAGE -y
 systemctl status $PACKAGE
