@@ -8,6 +8,8 @@ LOG_FOLDER="/var/log/shellscript-log"
 SCRIPT_NAME"$(echo $0 | cut -d "." -f1)"
 LOG_FILE=""$LOG_FOLDER"/"$SCRIPT_NAME".log"
 
+trap 'echo "ERROR Occured at line $LINENO"' ERR
+
 mkdir -p "$LOG_FOLDER"
 
 # Error Handling using VALIDATE FUNCTION
