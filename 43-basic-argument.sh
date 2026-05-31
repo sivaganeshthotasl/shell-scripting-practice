@@ -1,9 +1,9 @@
 #!/bin/bash
 
-NAME="Siva Ganesh Thota SL"
+NAME="$1"
 
 
-echo "My Name is $NAME"
+echo "HELLO $1"
 
 
 
