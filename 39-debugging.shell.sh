@@ -5,7 +5,7 @@
 
 set -x
 
-PACKAGE="msql"
+PACKAGE="nginx"
 
 dnf install $PACKAGE -y
 systemctl status $package
