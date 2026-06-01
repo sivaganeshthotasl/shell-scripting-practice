@@ -10,7 +10,7 @@
 
 # Loop through arguments passing from the script
 USAGE(){
-    if [ $# -ge 1 ]
+    if [ $# -le 1 ]
     then
         echo "Usage: sh "$0" <package name1> <package name2>"
         exit 1
