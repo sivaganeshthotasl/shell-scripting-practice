@@ -22,8 +22,8 @@ USAGE "$@"   #  This passes all script arguments to the function.
 
 for PACKAGE in "$@"   
 do
-     echo "Installing $PACKAGE"
-     dnf install $PACKAGE" -y
+     echo "Installing "$PACKAGE""
+     dnf install "$PACKAGE" -y
 done
 
 
