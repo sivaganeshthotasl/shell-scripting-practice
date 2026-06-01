@@ -1,6 +1,8 @@
 #!/bin/bash
 
-PACKAGES=("$1" "$2" "$3")
+PACKAGES="$@"
 
-dnf install "${PACKAGES[@]}" -y
+dnf install $PACKAGES -y
+
+
 
