@@ -12,6 +12,11 @@ do
     then
          echo "Service is $SERVICE not Active"
          systemctl start "$SERVICE"
+         if [ $? eq 0 ]
+         then
+              echo "Starting $SERVICE ...ACTIVATED"
+         fi
+         
     else
          echo "Service is $SERVICE is already in Active..Skipping"
     fi
