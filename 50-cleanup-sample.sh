@@ -5,7 +5,7 @@
 
 #Start with Directory Variable
 SOURCE_DIR="/sourcedir"
-DESTINATION_DIR="/destinationdir"
+DESTINATION_DIR="/destinationdir
 DAYS="${3:-14}"
 
 # Validate if source dir exist
