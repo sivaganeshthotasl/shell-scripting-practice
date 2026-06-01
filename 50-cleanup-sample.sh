@@ -42,10 +42,16 @@ then
        if [ -n $ZIP_FILE ]
        then 
              echo "Zip files are created successfully"
+             while IFS= read -r filepath
+             do
+                 echo "Deleting more than 14 days old log files"
+                 rm -rf $filepath
+             done >>> $FILES
        else
              echo "Zip files are not created successfully"
              exit 1
        fi
+       
 else
       echo "No Log Files found older then $DAYS days...Skipping"
 fi
