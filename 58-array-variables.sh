@@ -5,4 +5,7 @@ PACKAGE=("nginx" "python3" "redis") # PACKAGE is a variable name and values are 
 # To access array variables we use "${PACKAGE[0]}" means that nginx is installing. here values counts from 0.
 echo "Installing "${PACKAGE[0]}""
 
+# OutPut shows
+# Installing nginx
+
 
