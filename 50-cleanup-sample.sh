@@ -34,23 +34,23 @@ then
        # Generate time statmp for zip file name
        TIME_STAMP="$(date +%F-%H-%M-%S)"
        # Create zip file path using destination directory and timestamp
-       ZIP_FILE="$DESTINATION_DIR"/app-log-"$TIME_STAMP.zip"
+       ZIP_FILE="$DESTINATION_DIR/app-log-$TIME_STAMP.zip"
        # Pass log files to zip command using find command and pipe
        find "$SOURCE_DIR" -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
        echo "zip files are created at: $ZIP_FILE"
        # check wheter zip exist or not
-       if [ -n $ZIP_FILE ]
-       then 
+        if [ -f $ZIP_FILE ]
+        then 
              echo "Zip files are created successfully"
              while IFS= read -r filepath
              do
-                 echo "Deleting more than 14 days old log files"
+                 echo "Deleting more than 14 days old log files: $filepath"
                  rm -rf $filepath
-             done >> $FILES
-       else
+             done <<< $FILES
+        else
              echo "Zip files are not created successfully"
              exit 1
-       fi
+        fi
        
 else
       echo "No Log Files found older then $DAYS days...Skipping"
