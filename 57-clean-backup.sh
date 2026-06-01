@@ -31,7 +31,7 @@ then
           echo "deleting old logs $filepath"
           rm -rf "$filepath"
           echo "Deleted Old logs $filepath Successfully"
-      done << "$FILES"
+      done <<< $FILES
 else
      echo "Files $FILES are not found"
      exit 1
