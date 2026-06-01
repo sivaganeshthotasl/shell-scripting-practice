@@ -11,6 +11,6 @@ echo "Installing ${PACKAGE[1]}"
 echo "Installing ${PACKAGE[2]}"
 
 # array lenth
-echo "Total Lenth: ${PACKAGE[#]}"
+echo "Total Lenth: ${#PACKAGE[@]}"
 
 
