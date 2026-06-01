@@ -12,7 +12,7 @@ ZIP_FILE="$DESTINATION_DIR/app-log-$TIME_STAMP.zip"
 
 if [ -n "$FILES" ]
 then
-      echo "Files are zip to:"
+      echo "Old Log Files are zip to:"
       echo $FILES
       find "$FILE_PATH" -name "*.log" -mtime +"$DAYS" | zip -@ "$ZIP_FILE"
       echo "Zip file created at: "$ZIP_FILE""
