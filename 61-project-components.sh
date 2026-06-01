@@ -3,7 +3,7 @@
 
 COMPONENTS=("Frontend" "Catalogue" "MongoDB" "Redis" "User" "Cart" "Mysql" "Shipping" "Rabbitmq" "Payment" "Dispatch")
 
-for COMPONENT in ${COMPONENT[@]}
+for COMPONENT in ${COMPONENTS[@]}
 do
       echo "Deploying $COMPONENT"
 done
