@@ -29,9 +29,9 @@ then
 
       while IFS= read -r filepath
       do
-           echo "deleting $filepath"
+           echo "deleting "$filepath""
            rm -rf "$filepath"
-      done << $FILES
+      done << "$FILES"
 
 else
      echo "Files $FILES are not found"
