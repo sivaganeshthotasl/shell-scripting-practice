@@ -1,14 +1,17 @@
 #!/bin/bash
 
 
-# Loop through arguments inside the script
+# # Loop through arguments inside the script
 
-# for PACKAGES in nginx redis mysql-server
-# do
-#      echo "Installing $PACKAGES"
-# done
+# # for PACKAGE in nginx redis mysql-server
+# # do
+# #      echo "Installing "$PACKAGE""
+#        dnf install "$PACKAGE"
+# # done
 
 # Loop through arguments passing outside from the script
+
+
 USAGE(){
     if [ $# -eq 0 ]
     then
@@ -16,6 +19,9 @@ USAGE(){
         exit 1
     fi
 }
+# Meaning:
+# if no arguments passed
+# stop script
 
 # Call the function if the argument not passed 
 USAGE "$@"   #  This passes all script arguments to the function.
