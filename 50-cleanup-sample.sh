@@ -4,8 +4,8 @@
 # Delete the Old Files from the source dir
 
 #Start with Directory Variable
-SOURCE_DIR="/source_dir"
-DESTINATION_DIR="/destination_dir"
+SOURCE_DIR="/sourcedir"
+DESTINATION_DIR="/destinationdir"
 DAYS="${3:-14}"
 
 # Validate if source dir exist
