@@ -8,13 +8,14 @@ for PACKAGE in ${PACKAGES[@]}
 do
      echo "installing... $PACKAGE"
      dnf install $PACKAGE -y
+     # check whether package is installed or not
      if [ $? -eq 0 ]
      then
           echo "$PACKAGE is installed Successfully"
      else
           echo "$PACKAGE Installaion...Failled"
      fi
-     
+
 done
 
 
