@@ -10,6 +10,7 @@ DAYS="${3:-14}"
 
 # Validate if source dir exist
 if [ ! -d "$SOURCE_DIR" ]  # d means directory exists.
+then
      echo "Source Directory "$SOURCE_DIR" doesn't exist"
      exit 1
 fi
