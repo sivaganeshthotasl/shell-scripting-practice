@@ -46,7 +46,7 @@ then
              do
                  echo "Deleting more than 14 days old log files"
                  rm -rf $filepath
-             done >>> $FILES
+             done >> $FILES
        else
              echo "Zip files are not created successfully"
              exit 1
