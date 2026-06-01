@@ -8,7 +8,7 @@
 #      echo "Installing $PACKAGES"
 # done
 
-# Loop through arguments passing from the script
+# Loop through arguments passing outside from the script
 USAGE(){
     if [ $# -eq 0 ]
     then
@@ -17,9 +17,10 @@ USAGE(){
     fi
 }
 
-USAGE
+# Call the function if the argument not passed 
+USAGE "$@"   #  This passes all script arguments to the function.
 
-for PACKAGES in "$@"   
+for PACKAGE in "$@"   
 do
      echo "Installing $PACKAGES"
 done
