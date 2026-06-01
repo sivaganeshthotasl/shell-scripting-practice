@@ -36,7 +36,7 @@ then
        # Create zip file path using destination directory and timestamp
        ZIP_FILE="$DESTINATION_DIR"/app-log-"$TIME_STAMP.zip"
        # Pass log files to zip command using find command and pipe
-       find "$SOURCE_DIR" -name "*.log" -mtime +$DAYS | zip -@ $ZIP_FILE
+       find "$SOURCE_DIR" -name "*.log" -mtime +$DAYS | zip -@ "$ZIP_FILE"
        echo "zip files are created at: $ZIP_FILE"
        # check wheter zip exist or not
        if [ -n $ZIP_FILE ]
