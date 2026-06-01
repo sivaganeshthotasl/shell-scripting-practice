@@ -5,6 +5,7 @@ FILE_PATH="/sourcedir"
 DESTINATION_DIR="/destinationdir"
 DAYS="${3:-14}"
 TIME_STAMP="$(date +%F-%H-%M-%S)"
+PACKAGE="zip"
 
 FILES="$(find "$FILE_PATH" -name "*.log" -mtime +"$DAYS")"
 
@@ -14,6 +15,7 @@ if [ -n "$FILES" ]
 then
       echo "Old Log Files are zip to:"
       echo $FILES
+      dnf install "$PACKAGE" -y
       find "$FILE_PATH" -name "*.log" -mtime +"$DAYS" | zip -@ "$ZIP_FILE"
       echo "Zip file created at: "$ZIP_FILE""
       # zip File Validation
