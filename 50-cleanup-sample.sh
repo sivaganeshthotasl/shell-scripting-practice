@@ -9,14 +9,13 @@ DESTINATION_DIR="/destinationdir"
 DAYS="${3:-14}"
 
 # Validate if source dir exist
-if [ -d "$SOURCE_DIR" ]
-then
+if [ ! -d "$SOURCE_DIR" ]  # d means directory exists.
      echo "Source Directory "$SOURCE_DIR" doesn't exist"
      exit 1
 fi
 
 # Validate if destination Dir exist
-if [ -d "$DESTINATION_DIR"]
+if [ ! -d "$DESTINATION_DIR" ]
 then
      echo "Destination Dir "$DESTINATION_DIR" doesn't exist"
      exit 1
