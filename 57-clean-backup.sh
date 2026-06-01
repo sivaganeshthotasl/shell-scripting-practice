@@ -29,7 +29,7 @@ then
       while IFS= read -r filepath
       do
           echo "deleting old logs $filepath"
-          rm -rf "$filepath"
+          rm -f "$filepath"
           echo "Deleted Old logs $filepath Successfully"
       done <<< $FILES
 else
