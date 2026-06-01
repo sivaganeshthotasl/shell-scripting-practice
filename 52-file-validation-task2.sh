@@ -4,7 +4,7 @@
 
 FILE_CHECK="/tmp/text.txt"
 
-if [ -f "$FILE_CHECK" ]
+if [ -f "$FILE_CHECK" ] # -f mean check weather the file exist
 then
      echo "File "$FILE_CHECK" exists"
 else
