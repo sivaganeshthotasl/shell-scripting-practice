@@ -8,3 +8,10 @@ COMMAND="$(grep nginx "$FILE_PATH")"
 
 echo "$COMMAND"
 
+# Remove File System Header
+
+vCOMMAND="$(df -hT | grep -v Filesystem)
+
+echo "$vCOMMAND"
+
+
