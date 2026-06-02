@@ -10,7 +10,7 @@ echo "$COMMAND"
 
 # Remove File System Header
 
-vCOMMAND="$(df -hT | grep -v Filesystem)
+vCOMMAND="$(df -hT | grep -v Filesystem | awk '{print $@}')
 
 echo "$vCOMMAND"
 
