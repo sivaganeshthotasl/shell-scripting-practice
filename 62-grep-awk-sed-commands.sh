@@ -12,5 +12,5 @@ echo "$COMMAND"
 
 VCOMMAND="$(df -hT | grep -v Filesystem | awk '{print $0}')"
 
-echo "VCOMMAND"
+echo "$VCOMMAND"
 
