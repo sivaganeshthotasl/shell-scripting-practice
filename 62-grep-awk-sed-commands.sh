@@ -16,6 +16,6 @@ echo "$VCOMMAND"
 
 # Print only Filesystem usage mountpoint
 
-FUM="$(df -hT | awk '{print $1 $6 $7}')"
+FUM="$(df -hT | awk '{print $1, $6, $7}')"
 
 echo "$FUM"
