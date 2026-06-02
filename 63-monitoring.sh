@@ -26,7 +26,7 @@ then
     echo "ALERT: Memory Usage -> $MEMORY_USAGE%"
 fi
 
-echo
+
 echo "===== CPU CHECK ====="
 
 CPU_USAGE=$(top -bn1 | awk '/Cpu/ {print int(100-$8)}')
