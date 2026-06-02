@@ -4,7 +4,7 @@
 
 FILE_PATH="/samplenginx.txt"
 
-COMMAND="$(grep Nginx "$FILE_PATH")"
+COMMAND="$(grep nginx "$FILE_PATH")"
 
 echo "$COMMAND"
 
