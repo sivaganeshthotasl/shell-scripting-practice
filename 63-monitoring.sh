@@ -17,5 +17,22 @@ do
     fi
 done
 
+echo "===== MEMORY CHECK ====="
 
+MEMORY_USAGE=$(free | awk '/Mem:/ {print int($3/$2 * 100)}')
+
+if [ $MEMORY_USAGE -gt $MEMORY_THRESHOLD ]
+then
+    echo "ALERT: Memory Usage -> $MEMORY_USAGE%"
+fi
+
+echo
+echo "===== CPU CHECK ====="
+
+CPU_USAGE=$(top -bn1 | awk '/Cpu/ {print int(100-$8)}')
+
+if [ $CPU_USAGE -gt $CPU_THRESHOLD ]
+then
+    echo "ALERT: CPU Usage -> $CPU_USAGE%"
+fi
 
