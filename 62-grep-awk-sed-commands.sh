@@ -14,3 +14,8 @@ VCOMMAND="$(df -hT | grep -v Filesystem | awk '{print $0}')"
 
 echo "$VCOMMAND"
 
+# Print only Filesystem usage mountpoint
+
+FUM="$(df -hT | awk '{print $1 $6 $7}')"
+
+echo "$FUM"
